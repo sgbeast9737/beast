@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beast store</title>
+    <link rel="stylesheet" href="style/theme.css">
+    <link rel="stylesheet" href="style/index.css">
+</head>
+
+<body>
+    <div id="side_navigation">
+        <button id="side_nav_cancelButton">X</button>
+    </div>
+
+    <header>
+        <button id="navigate_btn">
+            <div class="lines"></div>
+            <div class="lines"></div>
+            <div class="lines"></div>
+        </button>
+        <h1>Beast store</h1>
+        <div id="login"></div>
+    </header>
+
+    <main>
+        <div id="float_cart">
+            <img src="" alt="">
+        </div>
+            <div id="card_layout">
+
+                <!-- <div id="card">
+                    <div class="card_img">
+                        <div id="price">$70</div>
+                        <img src="images/p2.jpg" alt="shoes image">
+                    </div>
+                    <div class="card_details">
+                        <p>Name</p>
+                        <p>Brand Name</p>
+                        <p>Category</p>
+                    </div>
+                </div> -->
+               
+            </div>
+    </main>
+
+    <footer>
+        <h3>Contect Us</h3>
+    </footer>
+
+    <script>
+        function load() {
+            var str = "";
+
+            for (let index = 0; index < 5; index++) {
+                str += `
+                <div id="card">
+                    <div class="card_img">
+                        <div id="price">$70</div>
+                        <img src="images/p${index + 1}.jpg" alt="shoes image">
+                    </div>
+                    <div class="card_details">
+                        <p>Name</p>
+                        <p>Brand Name</p>
+                        <p>Category</p>
+                    </div>
+                </div>`;
+            }
+            document.getElementById('card_layout').innerHTML = str;
+        }
+         load()
+
+        document.getElementById('navigate_btn').addEventListener('click', function () {
+            var panel = document.getElementById('side_navigation').style.width = "70vw";
+        });
+
+        document.getElementById('side_nav_cancelButton').addEventListener('click', function () {
+            var panel = document.getElementById('side_navigation').style.width = "0vw";
+        });
+
+    </script>
+</body>
+
+</html>
