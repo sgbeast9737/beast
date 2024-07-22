@@ -120,13 +120,13 @@ main{
     width: 100%;
     display: grid;
     place-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(37vmin, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(41vmin, 1fr));
 }
 
 #card{
     background-color: var(--card-back-color);
-    height: 47vmin;
-    width: 36vmin;
+    height: 53vmin;
+    width: 40vmin;
     border-radius: 10px;
     padding: 7px;
     gap : 5px;
