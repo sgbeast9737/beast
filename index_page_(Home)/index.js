@@ -47,13 +47,14 @@ function load() {
         str += `
                 <div id="card">
                     <div class="card_img">
-                        <div id="price">$70</div>
+                        <button id="img_like"></button>
+                        <div id="price">Rs. 700</div>
                         <img loading="lazy" src="images/p${index + 1}.jpg" alt="shoes image">
                     </div>
                     <div class="card_details">
                         <p>Name</p>
+                        <p id="category">Category</p>
                         <p>Brand Name</p>
-                        <p>Category</p>
                     </div>
                 </div>`;
     }

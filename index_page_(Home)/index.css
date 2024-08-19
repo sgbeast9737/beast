@@ -22,7 +22,7 @@ header,footer{
 
 /* header section */
 header{
-    background-color: #343A40;
+    background-color: #343a40;
     height: 17vmin;
     max-height: 100px;
     top: 0px;
@@ -64,6 +64,15 @@ header{
     height: 100%;
     border: none;
     border-radius: 3px;
+    
+    box-shadow: 
+        0.3px 0.5px 0.6px hsl(0deg 0% 0% / 0.14),
+        1.1px 2.2px 2.4px -0.6px hsl(0deg 0% 0% / 0.13),
+        2.3px 4.6px 5.1px -1.1px hsl(0deg 0% 0% / 0.12),
+        4.4px 8.8px 9.7px -1.7px hsl(0deg 0% 0% / 0.11),
+        8.1px 16.2px 17.9px -2.3px hsl(0deg 0% 0% / 0.1),
+        14px 28px 31px -2.8px hsl(0deg 0% 0% / 0.09),
+        22.8px 45.5px 50.4px -3.4px hsl(0deg 0% 0% / 0.08);
 }
 #header-center-section input{
     width: 90%;
@@ -107,7 +116,8 @@ header{
 
 /* main section */
 main{
-    background-color: #F8F9FA;
+    /* background-color: #F8F9FA; */
+    background-color: hsl(220deg 100% 80%);
     /* background-color: rgba(0, 0, 0, 0.714); */
     overflow: auto;
     padding-top: 10px;
@@ -216,10 +226,21 @@ main::-webkit-scrollbar{
     width: 37vmin;
     border-radius: 2%;
     padding: 7px;
-    box-shadow: 2px 2px 7px 0.1px rgba(0, 0, 0, 0.501);
+
+    /* box-shadow: 2px 2px 7px 0.1px rgba(0, 0, 0, 0.501); */
+    box-shadow:
+      0 1px 1px hsl(0deg 0% 0% / 0.075),
+      0 2px 2px hsl(0deg 0% 0% / 0.075),
+      0 4px 4px hsl(0deg 0% 0% / 0.075),
+      0 8px 8px hsl(0deg 0% 0% / 0.075),
+      0 16px 16px hsl(0deg 0% 0% / 0.075)
+    ;
+    /* filter: drop-shadow(
+      1px 2px 5px hsl(220deg 60% 50%)
+    ); */
+    
     margin-bottom: 17px;
     background-color: #f4f4f5;
-    /* transition: transform 0.5s ease-in,box-shadow 0.5s ease-in; */
 }
 .card_img{
     height: 78%;
@@ -227,7 +248,6 @@ main::-webkit-scrollbar{
     margin-bottom: 2px;
     overflow: hidden;
     position: relative;
-    /* transition: box-shadow 0.5s ease-in; */
 }
 .card_img img{
     z-index: -1;
@@ -236,15 +256,25 @@ main::-webkit-scrollbar{
     width: 100%;
 }
 #price{
+    font-family: sans-serif;
     position: absolute;
     bottom: 5px;
     color: white;
     background-color: rgba(0, 0, 0, 0.512);
     padding: 2px 7px;
     border-radius: 3px;
-    font-weight: 900;
     right: 5px;
-    font-size: 2.5vmin;
+    font-size: 2vmin;
+}
+#img_like{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 5%;
+    aspect-ratio: 1 / 1;
+    background-color: transparent;
+    border: none;
+    background-image: url("../Icons/heart_black.svg");
 }
 .card_details{
     height: 23%;
@@ -252,23 +282,12 @@ main::-webkit-scrollbar{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-}
-.card_details p{
     font-size: 2vmin;
-    font-weight: 700;
 }
-
-/* #card:hover{
-    box-shadow: 0px 0px 70px 7px cyan;
-    /* transform: rotate3d(1,1,0,20deg);  */
-/*}
-#card:hover .card_img{
-    box-shadow: -1px -1px 20px 0.2px cyan;
+#category{ color: gray; }
+.card_details p{
+  /* background-color: red; */
 }
-#card:hover #price{
-    background-color: red;
-} */
-/* end card styling */
 
 /* footer section which is inside main  */
 footer{
