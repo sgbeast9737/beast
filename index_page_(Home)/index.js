@@ -1,15 +1,15 @@
 let panel = document.getElementById("side_panel");
 
 // code that verifys user log in
-if (localStorage.getItem('userLogIn') === null) {
-    localStorage.setItem('userLogIn', 'false');
+// if (localStorage.getItem('userLogIn') === null) {
+//     localStorage.setItem('userLogIn', 'false');
     
-    document.getElementById("sign_in_page").style.zIndex = 0;
-}
-else
-{
-    document.getElementById("sign_in_page").style.display = "none";
-}
+//     document.getElementById("sign_in_page").style.zIndex = 0;
+// }
+// else
+// {
+//     document.getElementById("sign_in_page").style.display = "none";
+// }
 
 document.getElementById("login").addEventListener("click", () => {
     window.location.href = "log_in_page/login.html";
@@ -20,7 +20,7 @@ window.addEventListener('beforeunload',remove_data);
 document.getElementById("log_out").addEventListener("click", remove_data);
 
 function remove_data(){
-    localStorage.removeItem('userLogIn');
+    //localStorage.removeItem('userLogIn');
     
     let sign_in_page = document.getElementById("sign_in_page").style;
 
